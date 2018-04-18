@@ -1,0 +1,34 @@
+<section>
+  <h1>All Cities</h1>
+  <div class="cities-index">
+    <div class="row">
+      <div ng-repeat="city in citiesIndex.all" ui-sref="citiesShow({ id: city.id })" class="col-lg-4 col-6">
+        <div class="city">
+          <div class="city-image" style="background-image:url({{ city.image }})"></div>
+          <h2>{{ city.name }}</h2>
+          <p>{{ city.country }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add events here -->
+  <h1>Events Near Me</h1>
+  <div class="events">
+    <div class="row">
+      <div ng-repeat="event in citiesIndex.events" class="col-lg-3 col-md-4 col-6">
+        <div class="event">
+          <img ng-src="{{ event.largeimageurl }}">
+          <a href="{{ event.link }}" target="_blank">
+            <h4>{{ event.eventname }}</h4>
+            <h5>{{ event.venue.name }}</h5>
+          </a>
+          <h6>{{ event.date | date: 'fullDate'}}</h6>
+          <div class="icons">
+            <p><i class="fa fa-ticket" aria-hidden="true"></i> {{ event.entryprice }}</p>
+            <p><i class="fa fa-users" aria-hidden="true"></i> {{ event.goingtocount }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

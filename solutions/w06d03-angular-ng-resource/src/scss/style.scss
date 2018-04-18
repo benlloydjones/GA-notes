@@ -1,0 +1,61 @@
+body {
+  font-family: 'Asap', sans-serif;
+}
+
+header {
+  font-family: 'Bungee', cursive;
+  .navbar {
+    background: black;
+    border-radius: 0;
+
+    a {
+      color: white !important;
+      &.navbar-brand {
+        color: #ffe81f !important;
+      }
+    }
+  }
+}
+
+main {
+  li {
+    padding: 1em 0;
+  }
+}
+
+span {
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.blue {
+  color: blue;
+}
+
+.orange {
+  color: orange;
+}
+
+.white {
+  color: white;
+}
+
+.green {
+  color: green;
+}
+
+.bronze {
+  color: gold;
+}
+
+.purple {
+  color: purple;
+}
+
+.red {
+  color: red;
+}
+
+.white {
+  background: black;
+}

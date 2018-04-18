@@ -1,0 +1,14 @@
+.success {
+  @extend .message;
+  background-color: green;
+}
+
+.error {
+  @extend .message;
+  background-color: red;
+}
+
+.warning {
+  @extend .message;
+  background-color: yellow;
+}

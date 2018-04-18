@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="eventApp">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Angular App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,900" rel="stylesheet">
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="MainCtrl as main">
+  <header>
+    <nav class="container">
+      <ul>
+        <li><a ui-sref="home">EventApp</a></li>
+        <li><a ui-sref="citiesIndex">All Cities</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main ui-view ng-class="{ container: main.pageName !== 'home'}"></main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+header {
+  nav {
+    ul {
+      li {
+        a {
+          display: block;
+          padding: 1em;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          color: $brand-color;
+        }
+      }
+      p {
+        background: #036;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        color: rgba(255,255,255,0.75);
+        font-weight: 600;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

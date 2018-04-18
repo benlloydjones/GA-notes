@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="coffeeAssembly">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Angular Filter with Tests</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="CoffeeIndexCtrl as coffeeIndex">
+    <div class="wrapper">
+      <header class="l-box">
+        <h1>Coffee Assembly</h1>
+        <input type="text" class="search" ng-model="coffeeIndex.q" placeholder="Search...">
+      </header>
+
+      <div class="pure-g filters">
+        <div class="pure-u-1 pure-u-sm-1-2">
+          <div class="l-box">
+            <input type="checkbox" id="strength" ng-model="coffeeIndex.useStrength">
+            <label for="strength">Strength</label>
+            <input type="range" ng-model="coffeeIndex.strength" min="1" max="5" ng-disabled="!coffeeIndex.useStrength">
+          </div>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-2">
+          <div class="l-box">
+            <input type="checkbox" id="roast" ng-model="coffeeIndex.useRoast">
+            <label for="roast">Roast</label>
+            <input type="range" ng-model="coffeeIndex.roast" min="1" max="5" ng-disabled="!coffeeIndex.useRoast">
+          </div>
+        </div>
+      </div>
+
+      <select ng-model="coffeeIndex.price">
+        <option value="price">Low to High</option>
+        <option value="-price">High to Low</option>
+      </select>
+
+      <main class="coffeeIndex">
+        <div class="content pure-g">
+          <div ng-repeat="coffee in coffeeIndex.filtered" class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+            <div class="l-box">
+              <img ng-src="{{ coffee.image }}" alt="{{ coffee.name }}" class="pure-img">
+              <h2>{{ coffee.name | uppercase }}</h2>
+              <p>Price <strong>{{ coffee.price | currency: '£' }} / kg</strong></p>
+              <p>Strength <strong>{{ coffee.strength }}</strong></p>
+              <p>Roast <strong>{{ coffee.roast }}</strong></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

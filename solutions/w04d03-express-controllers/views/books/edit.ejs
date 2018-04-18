@@ -1,0 +1,38 @@
+<h1 class="title is-1">Edit</h1>
+
+<div class="columns">
+  <form class="column is-half" method="POST" action="/books/<%= book.id %>">
+    <input type="hidden" name="_method" value="PUT">
+
+    <div class="field">
+      <label for="title">Title</label>
+      <div class="control">
+        <input class="input" type="text" name="title" id="title" value="<%= book.title %>">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="title">Author</label>
+      <div class="control">
+        <div class="select">
+          <select name="author">
+            <% authors.forEach((author) => { %>
+              <option value="<%= author.id %>" <% if(author.id === book.author.id) { %>selected<% } %>>
+                <%= author.firstname %> <%= author.lastname %>
+              </option>
+            <% }) %>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="title">Description</label>
+      <div class="control">
+        <textarea class="textarea" name="description"><%= book.description %></textarea>
+      </div>
+    </div>
+
+    <button class="button is-primary is-fullwidth">Update</button>
+  </form>
+</div>

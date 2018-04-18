@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="portfolioApp">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <title>CSS Animations</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="MainCtrl as main" ng-class="main.pageName">
+  <div class="menu" ng-click="main.menuIsOpen = !main.menuIsOpen" ng-class="{ open: main.menuIsOpen }">
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav ng-class="{ open: main.menuIsOpen }">
+    <div class="left">
+      <h2>My Portfolio</h2>
+    </div>
+    <div class="right">
+      <div class="links">
+        <ul>
+          <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
+          <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+          <li><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main ui-view></main>
+</body>
+</html>

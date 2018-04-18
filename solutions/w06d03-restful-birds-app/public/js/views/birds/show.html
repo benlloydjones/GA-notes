@@ -1,0 +1,8 @@
+<section class="section">
+  <bird-details bird="birdsShow.bird"></bird-details>
+
+  <div>
+    <button class="button is-small is-primary" ui-sref="birdsEdit({ id: birdsShow.bird.id })">Edit</button>
+    <button class="button is-small is-danger" ng-click="birdsShow.delete()">Delete</button>
+  </div>
+</section>

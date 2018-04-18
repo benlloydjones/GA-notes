@@ -1,0 +1,63 @@
+<section>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="cities-show">
+        <div class="city-image" style="background-image:url({{ citiesShow.city.image }})"></div>
+        <h2>{{ citiesShow.city.name }}</h2>
+        <p>{{ citiesShow.city.country }}</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="events">
+        <div class="row">
+          <div class="col-12">
+            <div class="events-title">
+              <h3>Events in {{ citiesShow.city.name }}</h3>
+              <input type="radio" value="FEST" ng-model="citiesShow.eventcode" id="festival">
+              <label for="festival">Festival</label>
+              <input type="radio" value="LIVE" ng-model="citiesShow.eventcode" id="live">
+              <label for="live">Live</label>
+              <input type="radio" value="CLUB" ng-model="citiesShow.eventcode" id="club">
+              <label for="club">Club</label>
+              <input type="radio" value="DATE" ng-model="citiesShow.eventcode" id="dating">
+              <label for="dating">Dating</label>
+              <input type="radio" value="THEATRE" ng-model="citiesShow.eventcode" id="theatre">
+              <label for="theatre">Theatre</label>
+              <input type="radio" value="COMEDY" ng-model="citiesShow.eventcode" id="comedy">
+              <label for="comedy">Comedy</label>
+              <input type="radio" value="EXHIB" ng-model="citiesShow.eventcode" id="exhibition">
+              <label for="exhibition">Exhibition</label>
+              <input type="radio" value="KIDS" ng-model="citiesShow.eventcode" id="kids">
+              <label for="kids">Kids</label>
+              <input type="radio" value="BARPUB" ng-model="citiesShow.eventcode" id="barpub">
+              <label for="barpub">Bar/Pub</label>
+              <input type="radio" value="LGB" ng-model="citiesShow.eventcode" id="lgbt">
+              <label for="lgbt">LBGT</label>
+              <input type="radio" value="SPORT" ng-model="citiesShow.eventcode" id="sport">
+              <label for="sport">Sport</label>
+              <input type="radio" value="ARTS" ng-model="citiesShow.eventcode" id="arts">
+              <label for="arts">Arts</label>
+            </div>
+          </div>
+        </div>
+        <!-- add events here -->
+        <div class="row">
+          <div ng-repeat="event in citiesShow.events" class="col-md-4">
+            <div class="event">
+              <img ng-src="{{ event.largeimageurl }}">
+              <a href="{{ event.link }}" target="_blank">
+                <h4>{{ event.eventname }}</h4>
+                <h5>{{ event.venue.name }}</h5>
+              </a>
+              <h6>{{ event.date | date: 'fullDate'}}</h6>
+              <div class="icons">
+                <p><i class="fa fa-ticket" aria-hidden="true"></i> {{ event.entryprice }}</p>
+                <p><i class="fa fa-users" aria-hidden="true"></i> {{ event.goingtocount }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

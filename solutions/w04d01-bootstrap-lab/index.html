@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Frameworks Lab</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Instatram</a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Go!</button>
+        </form>
+      </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <h1 class="display-3">Instatram</h1>
+            <p class="lead">Sign up too see photos of trains from your friends</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="container">
+      <div class="row">
+        <section class="col-md-8">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image1.jpg" alt="Train 1" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel1">
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image2.jpg" alt="Train 2" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel2">
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image3.jpg" alt="Train 3" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel3">
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image4.jpg" alt="Train 4" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel4">
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image5.jpg" alt="Train 5" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel5">
+            </div>
+            <div class="col-lg-4 col-sm-6">
+              <img src="images/image6.jpg" alt="Train 6" class="img-fluid img-thumbnail" data-toggle="modal" data-target="#trainModel6">
+            </div>
+          </div>
+        </section>
+        <aside class="col-md-4">
+          <h3>Subscribe to our newsletter</h3>
+          <form>
+            <div class="form-group">
+              <label for="exampleTextInput">First name</label>
+              <input type="text" class="form-control" id="exampleTextInput" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleSelect1">Interests</label>
+              <select class="form-control" id="exampleSelect1">
+                <option>Trains</option>
+                <option>Trams</option>
+                <option>Railways</option>
+              </select>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                <small>I agree to the Terms &amp; Conditions</small>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="trainModel1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image1.jpg" alt="Train 1" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="trainModel2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image2.jpg" alt="Train 2" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="trainModel3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image3.jpg" alt="Train 3" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4 -->
+    <div class="modal fade" id="trainModel4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image4.jpg" alt="Train 4" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 5 -->
+    <div class="modal fade" id="trainModel5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image5.jpg" alt="Train 5" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 6 -->
+    <div class="modal fade" id="trainModel6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="images/image6.jpg" alt="Train 6" class="img-fluid">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

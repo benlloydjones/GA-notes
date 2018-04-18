@@ -1,0 +1,13 @@
+<h1 class="title is-1">Index</h1>
+
+<ul class="columns is-multiline">
+  <% books.forEach((book) => { %>
+    <li class="column is-half">
+      <div class="box">
+        <a href="/books/<%= book.id %>"><h3 class="title is-3"><%= book.title %></h3></a>
+        <h4 class="title is-4"><%= book.author.firstname %> <%= book.author.lastname %></h4>
+        <p><%= book.description %></p>
+      </div>
+    </li>
+  <% }); %>
+</ul>

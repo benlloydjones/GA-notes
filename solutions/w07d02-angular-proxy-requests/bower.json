@@ -1,0 +1,22 @@
+{
+  "name": "angular-directives-lab",
+  "description": "An app to track happiness using Angular directives.",
+  "main": "index.js",
+  "authors": [
+    "alexpchin <alex@alexchin.co.uk>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.6.6",
+    "angular-ui-router": "^1.0.6"
+  }
+}

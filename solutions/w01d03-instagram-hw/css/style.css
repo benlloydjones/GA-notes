@@ -1,0 +1,185 @@
+/*background color = #fafafa*/
+/*button blue = #3897f0*/
+/*border color = #e6e6e6*/
+/*footer link color = #003569*/
+/*text grey color = #999*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: #fafafa;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+input {
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  width: 750px;
+  overflow: auto;
+  margin: 45px auto 55px;
+  text-align: center;
+}
+
+footer {
+  max-width: 935px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #3897f0;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.left {
+  float: left;
+  width: 375px;
+  padding-top: 40px;
+}
+
+.right {
+  float: right;
+  width: 350px;
+}
+
+.login, .signin {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+}
+
+.login {
+  padding: 25px 40px;
+}
+
+.signin {
+  padding: 35px 40px;
+  margin-bottom: 10px;
+}
+
+.signin p {
+  color: #999;
+}
+
+.signin p a {
+  font-weight: bold;
+  color: #999;
+}
+
+.signin span {
+  text-transform: uppercase;
+  margin: 15px 0;
+  display: block;
+  font-weight: bold;
+  color: #999;
+}
+
+.links {
+  margin-top: 40px;
+}
+
+.links p {
+  margin-bottom: 10px;
+}
+
+.links img:first-of-type {
+  margin-right: 5px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+button, input[type="submit"] {
+  background-color: #3897f0;
+  color: #fff;
+  border: 0;
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+input[type="text"] {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+}
+
+footer {
+  clear: both;
+  margin-bottom: 45px;
+  font-size: 12px;
+  padding: 0 20px;
+}
+
+footer ul li {
+  display: inline;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 10px;
+  line-height: 1.5;
+}
+
+footer ul li:last-of-type {
+  float: right;
+  margin: 0;
+}
+
+footer ul li a {
+  color: #003569;
+}
+
+@media only screen and (max-width: 875px) {
+  main {
+    width: auto;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    float: none;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer ul li:last-of-type {
+    clear: both;
+    float: none;
+    display: block;
+  }
+}

@@ -1,0 +1,163 @@
+@import 'bootstrap/bootstrap-grid';
+
+$text: #171717;
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: $text;
+  color: white;
+  border-color: $text;
+}
+
+body {
+  margin: 0;
+  background-color: #fbfbfb;
+}
+
+body, input, button {
+  font-family: 'Playfair Display', serif;
+  color: $text;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+header {
+  background-color: $text;
+  ul {
+    @extend .list-reset;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    li {
+      a {
+        color: white;
+      }
+      margin-left: 15px;
+      &:first-child {
+        margin-right: auto;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.home {
+  background-image: url('/images/home.jpg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 50px);
+}
+
+section {
+  padding: 30px 0;
+}
+
+.box {
+  border: 1px solid #eaeaea;
+  padding: 15px;
+  background-color: white;
+}
+
+.cities-index {
+  [class*="col-"] {
+    margin-bottom: 15px;
+  }
+  .city {
+    @extend .box;
+    cursor: pointer;
+    h2 {
+      margin: 0 0 2px;
+    }
+    p {
+      margin: 0;
+      font-style: italic;
+    }
+  }
+}
+
+.city-image {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.cities-show {
+  @extend .box;
+  margin-bottom: 15px;
+  h2 {
+    margin: 0 0 2px;
+  }
+  p {
+    margin: 0;
+    font-style: italic;
+  }
+}
+
+.events {
+  .events-title {
+    @extend .box;
+  }
+  .event {
+    @extend .box;
+    height: 100%;
+  }
+  [class*="col-"] {
+    margin-bottom: 15px;
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  img {
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-size: 1em;
+    margin: 0 0 3px;
+  }
+  h5 {
+    font-size: 0.9em;
+    margin: 0 0 10px;
+    font-style: italic;
+    font-weight: 400;
+  }
+  h6 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="donutApp">
+<head>
+  <meta charset="utf-8">
+  <title>ngMessages with Angular</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body>
+  <main ng-controller="MainCtrl as main">
+    <h1>Angular Donuts</h1>
+    <form name="main.donutForm" ng-submit="main.add()" novalidate>
+      <label for="flavour">Flavor</label>
+      <input type="text" name="flavour" placeholder="What is your donut flavour..." ng-model="main.donut.flavour" required ng-pattern="/chocolate|apple|custard|strawberry/">
+
+      <div class="ng-message-error" ng-messages="main.donutForm.flavour.$error" ng-show="(main.donutForm.$submitted || main.donutForm.flavour.$touched)">
+        <p ng-message="required">Your flavour is required.</p>
+        <p ng-message="pattern">Please choose from chocolate, strawberry, apple and custard.</p>
+      </div>
+
+      <label for="size">Size</label>
+      <input type="text" name="size" placeholder="What size donut do you want?" ng-model="main.donut.size" required ng-pattern="/small|medium|large/">
+
+      <div class="ng-message-error" ng-messages="main.donutForm.size.$error" ng-show="(main.donutForm.$submitted || main.donutForm.size.$touched)">
+        <p ng-message="required">Your size is required.</p>
+        <p ng-message="pattern">Please choose from small, medium and large.</p>
+      </div>
+
+      <label for="eaten">Eaten</label>
+      <input type="checkbox" name="eaten" ng-model="main.donut.eaten">
+
+      <input type="submit" value="Add">
+    </form>
+
+    <h2 ng-class="[main.donut.flavour, main.donut.size, { eaten: main.donut.eaten }]">{{ main.donut.flavour }} {{ main.donut.size }}</h2>
+
+    <ul id="donuts">
+      <li ng-repeat="donut in main.all" class="animated" ng-class="[{ eaten : donut.eaten}, ($even ? 'even' : 'odd'), donut.flavour, donut.size]">
+        {{donut.flavour}} {{donut.size}}
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<h1>Restaurants Index</h1>
+
+<% restaurants.forEach(restaurant => { %>
+  <h2>
+    <a href="/restaurants/<%= restaurant.id %>"><%= restaurant.name %></a>
+  </h2>
+  <h4><%= restaurant.cuisine %></h4>
+<% }) %>

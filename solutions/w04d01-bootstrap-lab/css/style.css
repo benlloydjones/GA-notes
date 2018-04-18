@@ -1,0 +1,23 @@
+body, input, select, button {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-image: url('../images/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}

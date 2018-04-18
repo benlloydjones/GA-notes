@@ -1,0 +1,56 @@
+<section class="section">
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter">
+      <form ng-submit="birdsEdit.update()">
+        <div class="field">
+          <p class="control">
+            <label class="label" for="name">Name</label>
+          </p>
+          <input type="text" class="input" id="name" name="name" ng-model="birdsEdit.bird.name">
+        </div>
+
+        <div class="field">
+          <p class="control">
+            <label class="label" for="latinName">Latin Name</label>
+          </p>
+          <input type="text" class="input" id="latinName" name="latinName" ng-model="birdsEdit.bird.latinName">
+        </div>
+
+        <div class="field">
+          <p class="control">
+            <label class="label" for="family">Family</label>
+          </p>
+          <input type="text" class="input" id="family" name="family" ng-model="birdsEdit.bird.family">
+        </div>
+
+        <div class="field">
+          <p class="control">
+            <label class="label" for="image">Image Url</label>
+          </p>
+          <input type="text" class="input" id="image" name="image" ng-model="birdsEdit.bird.image">
+        </div>
+
+        <div class="field">
+          <p class="control">
+            <label class="label" for="image">Category</label>
+          </p>
+          <span class="select is-fullwidth">
+            <select name="category" id="category" ng-model="birdsEdit.bird.category">
+              <option ng-repeat="category in birdsEdit.categories" value="{{ category.id }}">{{ category.name }}</option>
+            </select>
+
+            <!-- <select name="category" id="category" ng-options="category.id as category.name for category in birdsEdit.categories" ng-model="birdsEdit.bird.category">
+            </select> -->
+
+          </span>
+        </div>
+
+        <div class="field">
+          <p class="control">
+            <input type="submit" class="button is-primary is-fullwidth" value="Update">
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

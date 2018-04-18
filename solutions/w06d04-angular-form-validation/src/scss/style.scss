@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Sniglet:800);
+@import 'errors';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  text-align: left;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Sniglet', Helvetica, cursive;
+  letter-spacing: -2px;
+  font-size: 4.2rem;
+  text-align: center;
+  margin: 2rem auto;
+  line-height: 1.2;
+}
+
+input, select, label {
+  display: block;
+  width: 100%;
+  line-height: 2.5;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input {
+  padding: 0 5px;
+  border: 2px solid #f4f4f4;
+  &[type="checkbox"] {
+    height: 2em;
+  }
+  &[type="submit"] {
+    background: #EB1D3A;
+    color: #fff;
+    border: none;
+    &:hover {
+      background: #222;
+      color: #fff;
+    }
+  }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Donut flavors */
+
+.strawberry {
+  color: red;
+}
+
+.chocolate {
+  color: brown;
+}
+
+.apple {
+  color: green;
+}
+
+.custard {
+  color: yellow;
+}
+
+/* Donut sizes */
+
+.small {
+  font-size: 18px;
+}
+
+.medium {
+  font-size: 25px;
+}
+
+.large {
+  font-size: 30px;
+}
+
+/* Donut eat */
+
+.eaten {
+  text-decoration: line-through;
+}
+
+/* Odd/Even */
+
+.even {
+  background: #f4f4f4;
+}
+
+.odd {
+  background: #cccccc;
+}

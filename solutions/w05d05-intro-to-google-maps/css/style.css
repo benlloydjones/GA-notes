@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body, button, input {
+  font-family: 'Inconsolata', monospace;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 40px;
+}
+
+.map {
+  width: 70%;
+  float: left;
+  height: 100vh;
+  background-color: lightgrey;
+}
+
+.dash {
+  float: left;
+  width: 30%;
+  height: 100vh;
+  background-color: #113B92;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form div {
+  margin-bottom: 30px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label:after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transition: all 0.3s ease;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+
+label {
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+label:before {
+  content: "";
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 840px) {
+  .dash, .map {
+    width: 100%;
+  }
+
+  .dash {
+    height: 175px;
+  }
+
+  .map {
+    height: calc(100vh - 175px);
+  }
+
+  form {
+    display: flex;
+  }
+
+  form div {
+    margin: 0;
+  }
+
+  form div:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  h1 {
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  h1 {
+    display: none;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form div:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}

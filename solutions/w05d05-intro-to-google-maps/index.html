@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intro to Google Maps</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <!-- loading in maps scripts -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2RxtzqXemZfiuYwMTFFCWmgyklcrAATE"></script>
+
+    <script src="js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      <div class="dash">
+        <h1>TFL Bike Points</h1>
+        <form>
+          <div>
+            <input type="radio" name="locations" id="all" value="all" checked>
+            <label for="all">All Bike Points</label>
+          </div>
+          <div>
+            <input type="radio" name="locations" id="bikes" value="bikes">
+            <label for="bikes">Available Bikes</label>
+          </div>
+          <div>
+            <input type="radio" name="locations" id="spaces" value="spaces">
+            <label for="spaces">Available Spaces</label>
+          </div>
+        </form>
+      </div>
+      <div class="map"></div>
+    </main>
+  </body>
+</html>

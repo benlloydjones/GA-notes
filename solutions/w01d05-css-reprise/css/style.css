@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 45px;
+  color: #fff;
+}
+
+main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 30px;
+  /*background-color: lightgrey;*/
+  overflow: hidden;
+}
+
+main .column {
+  width: 50%;
+  float: left;
+}
+
+main .intro {
+  padding-left: 30px;
+}
+
+main .intro h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+main .gallery ul li {
+  width: 33.33%;
+  float: left;
+}
+
+main .gallery ul li img {
+  display: block;
+}
+
+footer {
+  background-color: #3c3c3c;
+  padding: 20px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+
+  main .column {
+    width: 100%;
+  }
+
+  main .intro {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+  main .gallery ul li {
+    width: 50%;
+  }
+
+}

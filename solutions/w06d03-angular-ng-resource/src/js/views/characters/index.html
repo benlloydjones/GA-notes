@@ -1,0 +1,10 @@
+<ul class="list-unstyled">
+  <li ng-repeat="character in charactersIndex.all">
+    {{ character.name }}'s lightsaber is <span class="{{ character.lightsaber | lowercase }}">{{ character.lightsaber }}</span>
+    <div class="btn-group pull-right" role="group" aria-label="...">
+      <button class="btn btn-default" ui-sref="charactersShow({ id: character._id })">View</button>
+      <button class="btn btn-default" ui-sref="charactersEdit({ id: character._id })">Edit</button>
+      <button class="btn btn-default" ng-click="charactersIndex.delete(character)">Delete</button>
+    </div>
+  </li>
+</ul>

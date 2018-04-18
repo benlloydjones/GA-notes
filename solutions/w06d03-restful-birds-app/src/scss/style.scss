@@ -1,0 +1,8 @@
+@import "bulma/sass/utilities/initial-variables";
+
+$primary: #6ab5ff;
+$danger: #f9628b;
+$family-serif: 'Playfair Display', serif;
+$family-primary: $family-serif;
+
+@import "bulma/bulma";

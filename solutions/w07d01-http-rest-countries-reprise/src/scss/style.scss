@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body, input, button {
+  font-family: 'Cabin', sans-serif;
+}
+
+header, main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+select {
+  border: 1px solid black;
+  border-radius: 0;
+  outline: none !important;
+  height: 30px;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  li {
+    width: calc(25% - 20px);
+  }
+}
+
+img {
+  max-width: 100%;
+}

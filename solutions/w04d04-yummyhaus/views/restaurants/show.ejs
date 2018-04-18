@@ -1,0 +1,18 @@
+<h1>Restaurants Show</h1>
+
+<h2><%= restaurant.name %></h2>
+<h4><%= restaurant.cuisine %></h4>
+<p><%= restaurant.address %></p>
+
+<ul>
+  <% restaurant.comments.forEach(comment => { %>
+    <li><%= comment.text %> - <%= comment.rating %>/5</li>
+  <% }) %>
+</ul>
+
+<a href="/restaurants/<%= restaurant.id %>/edit">Edit</a>
+
+<form method="POST" action="/restaurants/<%= restaurant.id %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <button>Delete</button>
+</form>

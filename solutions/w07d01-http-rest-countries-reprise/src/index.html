@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="countriesApp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>CountriesApp</title>
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body ng-controller="CountriesIndexCtrl as countriesIndex">
+    <header>
+      <h1>REST Countries</h1>
+      <select ng-model="countriesIndex.order">
+        <option value="population">Population: Low - High</option>
+        <option value="-population">Population: High - Low</option>
+        <option value="name">A - Z</option>
+        <option value="-name">Z - A</option>
+      </select>
+    </header>
+    <main>
+      <ul>
+        <li ng-repeat="country in countriesIndex.filtered">
+          <h2>{{ country.name }}</h2>
+          <h3>{{ country.region }}</h3>
+          <p>Capital: {{ country.capital }}</p>
+          <p>Population: {{ country.population | number }}</p>
+          <img ng-src="{{ country.flag }}" alt="{{ country.name }}">
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

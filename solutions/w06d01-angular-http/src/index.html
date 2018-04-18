@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="donutApp">
+<head>
+  <meta charset="utf-8">
+  <title>Donut Shop</title>
+  <!-- inject:js -->
+  <!-- endinject -->
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-controller="DonutsCtrl as donuts">
+  <h1>Donut Shop</h1>
+  <form id="new-donut" ng-submit="donuts.donutsCreate()">
+    <input type="text" name='flavour' id="donut-flavour" placeholder="What type of donut?" ng-model="donuts.newDonut.flavor">
+    <select name="style" id="donut-style" ng-model="donuts.newDonut.style">
+      <option value="Old Fashioned">Old Fashioned</option>
+      <option value="Cake">Cake</option>
+      <option value="French Cruller">French Cruller</option>
+      <option value="Yeast">Yeast</option>
+    </select>
+    <input type="submit" value='Save My Donut'>
+  </form>
+
+  {{ donuts.newDonut }}
+
+  <ul id="donuts">
+    <li ng-repeat="donut in donuts.all">
+      {{ donut.flavor }} - <em>{{ donut.style}}</em> <button ng-click="donuts.donutsDelete(donut)">Delete</button>
+    </li>
+  </ul>
+</body>
+</html>

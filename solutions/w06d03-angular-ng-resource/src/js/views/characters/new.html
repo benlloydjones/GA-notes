@@ -1,0 +1,13 @@
+<form ng-submit="charactersNew.create()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" ng-model="charactersNew.character.name">
+  </div>
+
+  <div class="form-group">
+    <label for="lightsaber">Lightsaber</label>
+    <input type="text" class="form-control" id="lightsaber" name="lightsaber" ng-model="charactersNew.character.lightsaber">
+  </div>
+
+  <input type="submit" class="btn btn-default btn-block" value="Add">
+</form>

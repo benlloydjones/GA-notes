@@ -1,0 +1,12 @@
+<section class="section">
+  <div class="columns is-multiline">
+    <div ng-repeat="bird in birdsIndex.all" class="column is-half">
+
+      <bird-details bird="bird"></bird-details>
+
+      <div>
+        <button class="button is-small" ui-sref="birdsShow({ id: bird.id })">View</button>
+      </div>
+    </div>
+  </div>
+</section>

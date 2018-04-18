@@ -1,0 +1,254 @@
+@import 'vendor/reset';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+// Variables
+
+$pale-pink: #faabab;
+$medium-pink: #f76c6c;
+$dark-pink: #f99797;
+
+$pale-blue: #8ccdd0;
+$medium-blue: #79c4c8;
+
+// Extends
+
+.centered-styles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-styles {
+  width: 100%;
+  font-size: 14px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px;
+  background-color: white;
+  &:focus {
+    outline: none !important;
+  }
+}
+
+// Base styles
+
+* {
+  box-sizing: border-box;
+}
+
+body, button, input, textarea {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  &.home {
+    background-color: $pale-pink;
+  }
+  &.contact {
+    background-color: $dark-pink;
+  }
+  &.about {
+    background-color: $medium-pink;
+  }
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+}
+
+p {
+  color: white;
+  line-height: 1.2;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  .burger {
+    width: 20px;
+    height: 15px;
+    @extend .centered-styles;
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $pale-pink;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: all 0.25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+  }
+  &.open {
+    .burger {
+      span {
+        background-color: $pale-blue;
+        &:nth-child(1),
+        &:nth-child(4) {
+          top: 6px;
+          width: 0%;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+nav {
+  > div {
+    z-index: 2;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    &.left {
+      background-color: $medium-blue;
+      left: -50%;
+      h2 {
+        @extend .centered-styles;
+        font-size: 36px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &.right {
+      background-color: $pale-blue;
+      right: -50%;
+    }
+    .links {
+      @extend .centered-styles;
+      ul {
+        li {
+          line-height: 1.5;
+          a {
+            font-size: 26px;
+            color: white;
+            display: block;
+            &:hover {
+              color: rgba(0, 0, 0, 0.5);
+              animation: bounce 0.75s;
+            }
+            &.active {
+              color: white;
+              opacity: 0.5;
+              text-decoration: line-through;
+              animation: none; // cancel out animation
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open {
+    > div {
+      &.left {
+        left: 0;
+      }
+      &.right {
+        right: 0;
+      }
+    }
+  }
+}
+
+section {
+  min-height: 100vh;
+  .content {
+    @extend .centered-styles;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    h1 {
+      margin-bottom: 30px;
+    }
+    form {
+      input, textarea {
+        @extend .form-styles;
+        margin-bottom: 10px;
+        background-color: white;
+        &:focus {
+          outline: none !important;
+          box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        }
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      button {
+        @extend .form-styles;
+        color: $pale-pink;
+        box-shadow: 0px 3px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        &:hover {
+          animation: pulse 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

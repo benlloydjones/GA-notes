@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: $body-background-color;
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+main {
+  max-width: 320px * 2;
+  padding: 1em;
+  margin: 1em auto;
+  background-color: $brand-color;
+  color: #fff;
+  &:hover {
+    background-color: lighten($brand-color, 20%);
+  }
+}

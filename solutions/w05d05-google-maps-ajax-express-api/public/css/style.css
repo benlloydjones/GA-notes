@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  color: #252525;
+}
+
+body, input, button, .infowindow {
+  font-family: 'Karla', sans-serif;
+}
+
+.infowindow {
+  padding-top: 10px;
+}
+
+form input {
+  border: 1px solid #57ad49;
+  background-color: white;
+  display: block;
+  width: 100%;
+  color: #57ad49;
+  padding: 6px 8px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+form input:focus {
+  outline: none;
+  padding: 5px 7px;
+  border-width: 2px;
+}
+
+form button {
+  width: 100%;
+}
+
+button {
+  background-color: #57ad49;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.add {
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+form {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+}
+
+.dash {
+  width: 30%;
+  height: 100vh;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.map {
+  width: 70%;
+  height: 100vh;
+}
+
+.icon {
+  width: 20px;
+}
+
+.icon-faded {
+  opacity: 0.3;
+}
+
+.icon:not(:last-of-type) {
+  margin-right: 5px;
+}
+
+.cafe-image {
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.logo {
+  height: 35px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}

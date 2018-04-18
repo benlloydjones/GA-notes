@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+input {
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 50px auto;
+  padding: 30px;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+h1 {
+  color: #f6201d;
+  text-align: center;
+}
+
+.task {
+  margin-bottom: 50px;
+}
+
+#city, #current {
+  color: #f6201d;
+  font-weight: bold;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  border: 2px solid #f6201d;
+  border-radius: 50%;
+}
+
+.circle.pulse {
+  background-color: #f6201d;
+}
+
+button {
+  border: 2px solid #f6201d;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #f6201d;
+  width: 100px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  outline: none !important;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+button:hover {
+  color: #f6201d;
+  background-color: white
+}
+
+select {
+  background-color: white;
+  border: 2px solid #f6201d;
+  color: #f6201d;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  display: block;
+  margin-bottom: 10px;
+  border: 2px solid #f6201d;
+  padding: 10px;
+  font-size: 14px;
+  outline: none !important;
+}
+
+button.submit {
+  width: 170px;
+  height: 41px;
+}
+
+button.submitted {
+  opacity: 0.8;
+}
+
+button.submitted:hover {
+  color: white;
+  background-color: #f6201d;
+  cursor: default;
+}
+
+.name {
+  padding: 10px;
+  background-color: #f6201d;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+  cursor: pointer;
+}
